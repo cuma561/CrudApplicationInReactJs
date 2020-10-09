@@ -13,11 +13,17 @@ const AddCompany = () => {
     	setCompany({ ...company, [e.target.name]: e.target.value });
   	};
 
+  	const onSubmit = async e => {
+    e.preventDefault();
+    await axios.post("http://localhost:8080/company", company);
+    history.push("/");
+  };
+
 	return(
 		<div className="container">
 			<div className="w-75 mx-auto shadow p-5">
 				<h2 className="text-center mb-4">Add A Company</h2>
-				<form>
+				<form onSubmit={e => onSubmit(e)}>
 					<div className="form-group">
 						<input 
 							type="text"
