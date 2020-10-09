@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-success">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          React Crud Application
+          React Users
         </Link>
         <button
           className="navbar-toggler"
