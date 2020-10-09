@@ -15,6 +15,8 @@ import AddUser from "./components/users/AddUser";
 import EditUser from "./components/users/EditUser";
 import User from "./components/users/User";
 
+import AddCompany from './components/company/AddCompany';
+
 function App(props) {
   return (
     <Router>
@@ -27,6 +29,7 @@ function App(props) {
           <Route exact path="/users/add" component={AddUser} />
           <Route exact path="/users/edit/:id" component={EditUser} />
           <Route exact path="/users/:id" component={User} />
+          <Router exact path="/company/add" component={AddCompany} />
           <Route component={NotFound} />
         </Switch>
       </div>
