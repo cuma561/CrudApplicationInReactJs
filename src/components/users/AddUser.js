@@ -19,7 +19,7 @@ const AddUser = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.post("http://localhost:8080/api/addNewUser", user);
+    await axios.post("http://localhost:8080/api/users", user);
     history.push("/");
   };
   return (
