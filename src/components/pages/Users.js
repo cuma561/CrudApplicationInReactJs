@@ -10,12 +10,12 @@ const Users = () => {
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get("http://localhost:8080/api/users");
+    const result = await axios.get("http://localhost:3003/users");
     setUser(result.data);
   };
 
   const deleteUser = async id => {
-    await axios.delete(`http://localhost:8080/api/users/${id}`);
+    await axios.delete(`http://localhost:3003/users/${id}`);
     loadUsers();
   };
 
