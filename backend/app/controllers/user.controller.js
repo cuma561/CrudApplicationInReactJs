@@ -28,7 +28,7 @@ exports.addNewUser = (res,req) => {
 
 exports.getAllUsers = (req,res) => {
 	username = req.query.username;
-	var condition = username ? { username: { $regex: new RegExp(title), $options: "i" } } : {};
+	var condition = username ? { username: { $regex: new RegExp(username), $options: "i" } } : {};
 
 	User.find(condition).then(data => {
 		res.send(data);
