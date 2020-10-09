@@ -2,7 +2,7 @@ const db = require("../models");
 const User = db.user;
 
 exports.addNewUser = (res,req) => {
-	if (!req.body.username) {
+	if (!req.body.name) {
     res.status(400).send({ message: "Content can not be empty!" });
     return;
   }
@@ -27,8 +27,8 @@ exports.addNewUser = (res,req) => {
 };
 
 exports.getAllUsers = (req,res) => {
-	username = req.query.username;
-	var condition = username ? { username: { $regex: new RegExp(username), $options: "i" } } : {};
+  name = req.query  name;
+	var condition =  name ? {  name: { $regex: new RegExp  name), $options: "i" } } : {};
 
 	User.find(condition).then(data => {
 		res.send(data);
