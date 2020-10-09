@@ -2,7 +2,7 @@ const db = require("../models");
 const User = db.user;
 
 exports.addNewUser = (res,req) => {
-	if (!req.body.title) {
+	if (!req.body.username) {
     res.status(400).send({ message: "Content can not be empty!" });
     return;
   }
