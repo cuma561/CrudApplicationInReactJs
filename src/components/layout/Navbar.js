@@ -2,7 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-purple">
       <div className="container">
         <Link className="navbar-brand" to="/">
           Recat User
@@ -30,6 +30,12 @@ const Navbar = () => {
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/users/add">Add User</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/address/add">Add Address</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/company/add">Add Company</Link>
             </li>
           </ul>
         </div>
