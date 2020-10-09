@@ -3,7 +3,7 @@ module.exports = mongoose => {
 		{
 			street: String,
 			city: String,
-			suite: String
+			suite: String,
 			zipcode: String
 
 		},
