@@ -10,7 +10,7 @@ const AddCompany = () => {
 
   const { name } = company;
   const onInputChange = e => {
-    setUser({ ...company, [e.target.name]: e.target.value });
+    setCompany({ ...company, [e.target.name]: e.target.value });
   };
 
   const onSubmit = async e => {
